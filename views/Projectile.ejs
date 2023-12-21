@@ -27,6 +27,33 @@
     </h1>
     <div class="container d-flex justify-content-between">
         <canvas id="canvas" height="400" width="675"></canvas>
+
+
+
+        <div class="tools border rounded-3 px-5 py-3">
+            <h3 class="text-center">Tools</h3>
+            
+                <div class="mb-3 row">
+                    <label for="velocity" class="form-label">Enter initial velcoity</label>
+                    <input type="number" class="form-control" id="velocity" placeholder="Enter initial velcoity">
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="angle" class="form-label">Enter angle of projectile</label>
+                    <input type="number" class="form-control" id="angle" placeholder="Enter angle of projectile">
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="acc" class="form-label">Enter acceleration due to gravity</label>
+                    <input type="number" class="form-control" id="acc" placeholder="Enter acceleration due to gravity">
+                </div>
+
+                <button id="visualizeBtn" class="btn btn-success">Visualize</button>
+            </div>
+        </div>
+
+
+
         <div class="detail">
             <h1 style="margin-left:10px;">Points to Remember &RightArrow;</h1>
             <ul style="list-style: square;" class="d-flex flex-column justify-content-evenly align-items-left">

@@ -65,25 +65,59 @@ class Projectile{
     }
 
     // Method to perform ball action
-    interval;
     i = 0;
-    interval = setInterval(() => {
-        ctx.clearRect(0,0,canvas.width,canvas.height);
-        this.draw();
+    start(){
+        this.interval = setInterval(() => {
+            ctx.clearRect(0,0,canvas.width,canvas.height);
+            this.draw();
+    
+            this.perform(this.arr[this.i]);
+            if(this.i==this.arr.length-1){
+                clearInterval(this.interval);
+            }
+            this.i++;
+        });
+    }
 
-        this.perform(this.arr[this.i]);
-        if(this.i==this.arr.length-1){
-            clearInterval(this.interval);
+    stop(){
+        if(this.interval){
+            clearInterval(this.interval)
         }
-        this.i++;
-    });
+    }
 }
 
 
 
-let action = new Projectile(25,canvas.height-canvas.height/3,30,Math.PI/4,1.5);
 
-action.draw();
+let action = null
 
-action.interval();
+
+
+
+const vel = document.getElementById('velocity').value
+const angle = document.getElementById('angle').value
+const acc = document.getElementById('acc').value
+
+document.getElementById('visualizeBtn').addEventListener('click', () => {
+
+    
+
+    if(action){
+        action.stop();
+    }
+
+    const vel = document.getElementById('velocity').value
+    const angle = document.getElementById('angle').value
+    const acc = document.getElementById('acc').value
+
+    console.log(vel)
+    console.log(angle)
+    console.log(acc)
+
+    action = new Projectile(25,canvas.height-25,vel,angle,acc);
+
+    action.draw();
+    action.start();
+})
+
 

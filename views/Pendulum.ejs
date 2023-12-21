@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -55,4 +55,98 @@
     </div>
 </body>
 <script type="module" src="../static/animations/Pendulum.js"></script>
+</html> -->
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendulum</title>
+    <link rel="shortcut icon" href="../static/icon.png" type="image/x-icon">
+    <style>
+        .heading{
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+        .detail{
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include("animationBase") %>
+
+
+    <h1 class="display-3 heading">Simple Pendulum</h1>
+    <div class="container d-flex justify-content-between">
+        <canvas style="margin-bottom: 305px;"></canvas>
+        <div class="detail" style="margin-left: 50px;">
+
+            
+            <div class="tools border rounded-3 px-5 py-3">
+                <h3 class="text-center">Tools</h3>
+                <div class="mb-3 row">
+                    <label for="length" class="form-label">Length of Pendulum (vertical distance between point A and point B)</label>
+                    <input type="number" class="form-control" id="length" placeholder="Enter Length of Pendulum">
+                </div>
+    
+                <div class="mb-3 row">
+                    <label for="acc" class="form-label">Acceleration due to Gravity (g)</label>
+                    <input type="number" class="form-control" id="acc" placeholder="Enter Acceleration due to Gravity">
+                </div>
+    
+                  <button id="visualizeBtn" class="btn btn-success">Visualize</button>
+            </div>
+
+
+            <h1 style="margin-left:10px; margin-top: 68px;">Points to Remember &RightArrow;</h1>
+            <ul style="list-style: square;" class="d-flex flex-column justify-content-evenly align-items-center">
+                <li>At point A,Kinetic Energy(KE) of bob is maximum whereas Potential Energy(PE) is minimum.</li>
+                <li>At point B,Potential Energy(PE) of the bob will be maximum whereas Kinetic Energy(KE) is minimum.
+                </li>
+                <li>At point C,Potential Energy(PE) of the bob will be maximum whereas Kinetic Energy(KE) is minimum.
+                </li>
+            </ul>
+            <div class="formulas" style="margin-left: 10px;">
+                <span style="margin-left: 10px; font-weight:bold;">KE = &half;mv&#178;</span>
+            <br>
+            <span style="margin-left: 10px; font-weight:bold;"> PE = mgh</span>
+                <br>
+            <ul style="list-style: square;">
+                <li>
+                    Here 'm' is mass of the bob.
+                </li>
+                <li>
+                    Here 'h' is vertical distance between point A and point B(if we consider point A as lowest Potential Energy line).
+                </li>
+                <li>
+                    Here 'v' is magnitude of velocity of bob at point A.
+                </li>
+                <li>
+                    Here 'g' is Gravitational Acceleration (g=9.8 m/s&#178; on Earth).
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="../static/animations/Pendulum.js"></script>
 </html>
+
+
+
+
+
+
+
+
+

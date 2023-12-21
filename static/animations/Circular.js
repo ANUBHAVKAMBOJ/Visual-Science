@@ -7,11 +7,9 @@ let canvas = document.getElementById("canvas");
         x:400,
         y:250,
         angle:0
-
     }
     //for making path of circular motion
     function drawCircle(){
-        let radius = 200;
         ctx.beginPath();
         ctx.strokeStyle="black"
         ctx.setLineDash([5,5]);
@@ -19,7 +17,7 @@ let canvas = document.getElementById("canvas");
         ctx.stroke();
         ctx.closePath();
     }
-    drawCircle();
+    
 
     let ball={
         radius: 20,
@@ -28,7 +26,7 @@ let canvas = document.getElementById("canvas");
         speed:0.1
     }
 
-    function draw(){
+    function draw(ang, v){
         //drawing and animating ball
         ctx.clearRect(0,0,canvas.width,canvas.height);
         ctx.fillStyle = "rgba(0,0,0,0.1)";
@@ -51,15 +49,15 @@ let canvas = document.getElementById("canvas");
         ctx.stroke();
         ctx.closePath();
 
-        let newangle = circle.angle+3*ball.speed;
-        let newx= circle.x+circle.radius*Math.cos(newangle);
-        let newy= circle.y+circle.radius*Math.sin(newangle);
-        ctx.beginPath()
-        ctx.strokeStyle="black"
-        ctx.moveTo(ball.x,ball.y);
-        ctx.lineTo(newx,newy);
-        ctx.stroke()
-        ctx.closePath()
+        // let newangle = circle.angle+3*ball.speed;
+        // let newx= circle.x+circle.radius*Math.cos(newangle);
+        // let newy= circle.y+circle.radius*Math.sin(newangle);
+        // ctx.beginPath()
+        // ctx.strokeStyle="black"
+        // ctx.moveTo(ball.x,ball.y);
+        // ctx.lineTo(newx,newy);
+        // ctx.stroke()
+        // ctx.closePath()
 
         //line from center to circumference
         ctx.beginPath();
@@ -93,7 +91,29 @@ let canvas = document.getElementById("canvas");
        
 
     }
-    // draw();
 
-    
-    setInterval(draw,100);
+    drawCircle()
+
+    let radius = document.getElementById('radius').value
+    let ang = document.getElementById('angular').value
+
+    let Interval = null
+    let val = null
+
+    document.getElementById('visualizeBtn').addEventListener('click', () => {
+
+        let radius = document.getElementById('radius').value
+        let ang = document.getElementById('angular').value
+
+        if(Interval){
+            clearInterval(Interval)
+            
+            circle.radius = radius
+            ball.speed = radius*ang/200
+
+            console.log(circle.radius)
+            console.log(ball.speed)
+        }
+
+        Interval = setInterval(draw, 200);
+    })

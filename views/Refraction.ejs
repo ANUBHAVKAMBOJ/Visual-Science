@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -37,4 +37,75 @@
     </div>
 </body>
 <script type="module" src="../static/animations/Refraction.js"></script>
+</html> -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Science - Refraction</title>
+    <style>
+        .heading{
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+        /* canvas{
+            margin-left:0px ;
+        } */
+        .detail{
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <%- include("animationBase") %> 
+    <h1 class="heading display-5 mx-4 mb-2 mt-2">Refraction of Light</h1>
+    <div class="container d-flex justify-content-between">
+        <canvas style="margin-left: -90px; margin-bottom: 100px;"></canvas>
+        <div style="margin-left: 70px;" class="detail">
+
+            <div class="tools border rounded-3 px-5 py-3">
+                <h3 class="text-center">Tools</h3>
+                <div class="mb-3 row">
+                    <label for="RI_1" class="form-label">Refractive Index of Meduim 1</label>
+                    <input type="number" class="form-control" id="RI_1" placeholder="Enter Refractive Index of Meduim 1">
+                </div>
+    
+                <div class="mb-3 row">
+                    <label for="RI_2" class="form-label">Refractive Index of Medium 2</label>
+                    <input type="number" class="form-control" id="RI_2" placeholder="Enter Refractive Index of Meduim 2">
+                </div>
+    
+                  <button id="visualizeBtn" class="btn btn-success">Visualize</button>
+            </div>
+
+            <h1 style="margin-left:10px; margin-top: 40px;">Points to Remember &RightArrow;</h1>
+            <ul style="list-style: square;" class="d-flex flex-column justify-content-evenly">
+                <li>Refraction occurs when a light ray passes from one medium to another medium which are having different refractive indexes.</li>
+                <li>Angle of the incident ray – if the light is entering the substance at a greater angle, the amount of refraction will also be more noticeable. On the other hand, if the light is entering the new substance from straight on (at 90° to the surface), the light will still slow down, but it won’t change direction at all.
+                </li>
+                <li><b>Snell's Law </b>&RightArrow; This law gives the angle of the bending ray of light on the indices of refraction of two media. <br><b>n<sub>1</sub>/n<sub>2</sub>= sin(&theta;<sub>2</sub>)/sin(&theta;<sub>1</sub>)</b></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="module" src="../static/animations/Refraction.js"></script>
 </html>
+
+
+
+
+
+
+

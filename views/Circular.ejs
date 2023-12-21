@@ -21,7 +21,30 @@
     <%- include("animationBase") %> 
     <h1 class="heading display-3">Circular Motion</h1>
     <div class="container d-flex align-items-center justify-content-center flex-column">
-        <canvas id="canvas" height="600" width="800"></canvas>
+        
+        <div style="display: flex;">
+            <canvas id="canvas" height="600" width="800"></canvas>
+
+
+
+        <div class="tools border rounded-3 px-5 py-3">
+            <h3 class="text-center">Tools</h3>
+                <div class="mb-3 row">
+                    <label for="radius" class="form-label">Enter radius of circular motion</label>
+                    <input type="number" class="form-control" id="radius" placeholder="Enter radius of circular motion">
+                </div>
+
+                <div class="mb-3 row">
+                    <label for="angular" class="form-label">Enter angular speed (in rad/sec)</label>
+                    <input type="number" class="form-control" id="angular" placeholder="Enter angular speed">
+                </div>
+
+                  <button id="visualizeBtn" class="btn btn-success">Visualize</button>
+            </div>
+        </div>
+
+
+
         <div class="detail">
             <h1 style="margin-left:10px;">Points to Remember &RightArrow;</h1>
             <ul style="list-style: square;" class="d-flex flex-column justify-content-evenly align-items-left">
