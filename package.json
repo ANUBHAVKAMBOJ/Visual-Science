@@ -13,14 +13,6 @@
   "scripts": {
     "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Paras-Punjabi/Hackathon-Competition-HackNITP-4.0-.git"
-  },
   "author": "Code-Warriors",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Paras-Punjabi/Hackathon-Competition-HackNITP-4.0-/issues"
-  },
-  "homepage": "https://github.com/Paras-Punjabi/Hackathon-Competition-HackNITP-4.0-#readme"
+  "license": "ISC"
 }
