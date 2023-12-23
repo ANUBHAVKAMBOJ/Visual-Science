@@ -21,3 +21,13 @@ Open Terminal where our app is there and run
   npm run start
 ```
 After this goto http://localhost:8000
+
+### Images
+
+![Home Page](ss1.png)
+
+![Home Page](ss2.png)
+
+![Home Page](ss3.png)
+
+![Home Page](ss4.png)
